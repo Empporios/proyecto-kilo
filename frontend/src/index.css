@@ -1,68 +1,114 @@
+/* :root es para guardar variables y estilos que se usarán en toda la web */
 :root {
+  /* Para definir la familia de fuentes de todo el sitio */
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* Para definir la altura entre líneas de texto */
   line-height: 1.5;
+  /* Para definir el grosor normal de la fuente */
   font-weight: 400;
 
+  /* Para decirle al navegador que esta web tiene un tema claro y oscuro */
   color-scheme: light dark;
+  /* Para poner el color del texto (configuración inicial modo oscuro) */
   color: rgba(255, 255, 255, 0.87);
+  /* Para poner el color de fondo (configuración inicial modo oscuro) */
   background-color: #242424;
 
+  /* Para controlar cómo se sintetizan las fuentes */
   font-synthesis: none;
+  /* Para optimizar cómo se lee el texto */
   text-rendering: optimizeLegibility;
+  /* Para suavizar las fuentes en navegadores WebKit (Chrome, Safari) */
   -webkit-font-smoothing: antialiased;
+  /* Para suavizar las fuentes en Firefox */
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Para darle estilo a todos los links (etiqueta <a>) */
 a {
+  /* Para hacer la letra del link un poco más gruesa */
   font-weight: 500;
+  /* Para ponerle color al link */
   color: #646cff;
+  /* Para que no tenga el subrayado que trae por defecto */
   text-decoration: inherit;
 }
+/* Para cambiar el link cuando el mouse está encima */
 a:hover {
+  /* Para cambiar el color del link al pasar el mouse */
   color: #535bf2;
 }
 
+/* Para darle estilos al cuerpo principal de la web */
 body {
+  /* Para quitar todos los márgenes que pone el navegador por defecto */
   margin: 0;
- /* display: flex;
+  /* Esto está comentado, así que no hace nada. */
+  /* display: flex;
   place-items: center; */
+  /* Para que la web nunca sea más angosta que 320px */
   min-width: 320px;
+  /* Para que el body ocupe, como mínimo, el 100% de la altura de la pantalla */
   min-height: 100vh;
 }
 
+/* Para darle estilo a los títulos H1 */
 h1 {
+  /* Para poner un tamaño de letra grande */
   font-size: 3.2em;
+  /* Para que el espacio entre líneas del título sea más pequeño */
   line-height: 1.1;
 }
 
+/* Para darle estilo a todos los botones */
 button {
+  /* Para redondear las esquinas del botón */
   border-radius: 8px;
+  /* Para poner un borde de 1px, pero transparente */
   border: 1px solid transparent;
+  /* Para darle espacio interno (relleno) al botón */
   padding: 0.6em 1.2em;
+  /* Para definir el tamaño de la letra del botón */
   font-size: 1em;
+  /* Para que la letra del botón sea un poco más gruesa */
   font-weight: 500;
+  /* Para que el botón use la misma fuente definida en :root */
   font-family: inherit;
+  /* Para el color de fondo del botón (modo oscuro) */
   background-color: #1a1a1a;
+  /* Para que el cursor se vuelva una "manito" al pasar por encima */
   cursor: pointer;
+  /* Para que el cambio del 'border-color' dure 0.25 segundos (animación) */
   transition: border-color 0.25s;
 }
+/* Para cambiar el botón cuando el mouse está encima */
 button:hover {
+  /* Para que aparezca un borde de color al pasar el mouse */
   border-color: #646cff;
 }
+/* Para darle estilo al botón cuando está seleccionado (con "Tab" por ej.) */
 button:focus,
 button:focus-visible {
+  /* Para mostrar un borde visual de "foco" para accesibilidad */
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Esto es para estilos que se aplican SÓLO si el sistema está en MODO CLARO */
 @media (prefers-color-scheme: light) {
+  /* Para cambiar las variables globales SÓLO en modo claro */
   :root {
+    /* Para cambiar el color del texto a oscuro */
     color: #213547;
+    /* Para cambiar el fondo de la página a blanco */
     background-color: #ffffff;
   }
+  /* Para cambiar el hover del link SÓLO en modo claro */
   a:hover {
     color: #747bff;
   }
+  /* Para cambiar el botón SÓLO en modo claro */
   button {
+    /* Para poner el fondo del botón de un color claro */
     background-color: #f9f9f9;
   }
 }
