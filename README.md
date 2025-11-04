@@ -1,98 +1,98 @@
-# Cooking Tournament Manager
+# Administrador de Torneos de Cocina
 
-A full-stack application for managing cooking tournaments, built with Node.js/Express backend and React frontend.
+Una aplicación full-stack para gestionar torneos de cocina, construida con backend Node.js/Express y frontend React.
 
-## Project Structure
+## Estructura del Proyecto
 
-- `/backend` - Node.js + Express API server
-- `/frontend` - React + Vite SPA
+- `/backend` - Servidor API Node.js + Express
+- `/frontend` - SPA React + Vite
 
-## Features
+## Características
 
-- **Backend API**: RESTful endpoints for chefs, tournaments, registration, scoring, and rankings
-- **Frontend SPA**: User-friendly interface for managing chefs and tournaments
-- **Real-time Updates**: Consistent state between frontend and backend
-- **Responsive Design**: Works on desktop and mobile devices
-- **Form Validations**: Client and server-side validations
-- **Error Handling**: Clear error messages for users
+- **API Backend**: Endpoints RESTful para chefs, torneos, registro, puntuación y rankings
+- **SPA Frontend**: Interfaz amigable para gestionar chefs y torneos
+- **Actualizaciones en Tiempo Real**: Estado consistente entre frontend y backend
+- **Diseño Responsivo**: Funciona en dispositivos de escritorio y móviles
+- **Validaciones de Formularios**: Validaciones del lado del cliente y servidor
+- **Manejo de Errores**: Mensajes de error claros para los usuarios
 
-## Quick Start
+## Inicio Rápido
 
-### Prerequisites
+### Prerrequisitos
 
-- Node.js (v14 or higher)
-- npm or yarn
+- Node.js (v14 o superior)
+- npm o yarn
 
-### Installation
+### Instalación
 
-1. Clone the repository
-2. Install backend dependencies:
+1. Clona el repositorio
+2. Instala las dependencias del backend:
    ```bash
    cd backend
    npm install
    ```
-3. Install frontend dependencies:
+3. Instala las dependencias del frontend:
    ```bash
    cd ../frontend
    npm install
    ```
 
-### Running the Application
+### Ejecutando la Aplicación
 
-1. Start the backend server:
+1. Inicia el servidor backend:
    ```bash
    cd backend
    npm start
    ```
-   Server will run on http://localhost:3000
+   El servidor se ejecutará en http://localhost:3000
 
-2. Start the frontend development server:
+2. Inicia el servidor de desarrollo del frontend:
    ```bash
    cd frontend
    npm run dev
    ```
-   Frontend will run on http://localhost:5173
+   El frontend se ejecutará en http://localhost:5173
 
-### Testing
+### Pruebas
 
-Run frontend tests:
+Ejecuta las pruebas del frontend:
 ```bash
 cd frontend
 npm test
 ```
 
-## API Endpoints
+## Endpoints de la API
 
 ### Chefs
-- `POST /chefs` - Create a new chef
-- `GET /chefs` - Get all chefs
+- `POST /chefs` - Crear un nuevo chef
+- `GET /chefs` - Obtener todos los chefs
 
-### Tournaments
-- `POST /tournaments` - Create a new tournament
-- `GET /tournaments` - Get all tournaments
-- `GET /tournaments/:id` - Get tournament details
-- `POST /tournaments/:id/register` - Register chef for tournament
-- `POST /tournaments/:id/submit` - Submit score for chef
-- `GET /tournaments/:id/ranking` - Get tournament ranking
+### Torneos
+- `POST /tournaments` - Crear un nuevo torneo
+- `GET /tournaments` - Obtener todos los torneos
+- `GET /tournaments/:id` - Obtener detalles del torneo
+- `POST /tournaments/:id/register` - Registrar chef para el torneo
+- `POST /tournaments/:id/submit` - Enviar puntuación para el chef
+- `GET /tournaments/:id/ranking` - Obtener ranking del torneo
 
-## Usage Example
+## Ejemplo de Uso
 
-1. Create chefs via the Chef Management page
-2. Create a tournament via the Tournaments page
-3. Register chefs for the tournament
-4. Submit scores for each chef
-5. View the final ranking
+1. Crea chefs a través de la página de Gestión de Chefs
+2. Crea un torneo a través de la página de Torneos
+3. Registra chefs para el torneo
+4. Envía puntuaciones para cada chef
+5. Ve el ranking final
 
-## Technologies Used
+## Tecnologías Utilizadas
 
 - **Backend**: Node.js, Express.js, CORS, UUID
 - **Frontend**: React, React Router, Axios, Vite
-- **Testing**: Vitest, Testing Library
-- **Styling**: CSS
+- **Pruebas**: Vitest, Testing Library
+- **Estilos**: CSS
 
-## Development
+## Desarrollo
 
-- Backend uses in-memory storage (can be upgraded to database)
-- Frontend is built with modern React hooks and functional components
-- Responsive design with mobile-first approach
-- Comprehensive error handling and user feedback
+- El backend utiliza almacenamiento en memoria (puede actualizarse a base de datos)
+- El frontend está construido con hooks modernos de React y componentes funcionales
+- Diseño responsivo con enfoque mobile-first
+- Manejo completo de errores y retroalimentación del usuario

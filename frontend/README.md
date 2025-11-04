@@ -1,75 +1,75 @@
-# Frontend - Cooking Tournament Manager
+# Frontend - Administrador de Torneos de Cocina
 
-React SPA for managing cooking tournaments, built with Vite.
+SPA React para gestionar torneos de cocina, construida con Vite.
 
-## Installation
+## Instalación
 
 ```bash
 npm install
 ```
 
-## Running
+## Ejecutando
 
 ```bash
 npm run dev
 ```
 
-Frontend runs on http://localhost:5173
+El frontend se ejecuta en http://localhost:5173
 
-## Building
+## Construyendo
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## Testing
+## Pruebas
 
 ```bash
 npm test
 ```
 
-## Pages
+## Páginas
 
-### Home (/)
-- Welcome page with navigation links
+### Inicio (/)
+- Página de bienvenida con enlaces de navegación
 
-### Tournaments (/tournaments)
-- List all tournaments with registration status
-- Create new tournaments
-- Link to tournament details
+### Torneos (/tournaments)
+- Lista todos los torneos con estado de registro
+- Crear nuevos torneos
+- Enlace a detalles del torneo
 
-### Tournament Detail (/tournaments/:id)
-- Tournament information
-- List of registered chefs with scores
-- Register new chefs
-- Submit scores for registered chefs
-- View final ranking
+### Detalle del Torneo (/tournaments/:id)
+- Información del torneo
+- Lista de chefs registrados con puntuaciones
+- Registrar nuevos chefs
+- Enviar puntuaciones para chefs registrados
+- Ver ranking final
 
-### Chef Management (/chefs)
-- Create new chefs
-- List all existing chefs
+### Gestión de Chefs (/chefs)
+- Crear nuevos chefs
+- Listar todos los chefs existentes
 
-## Features
+## Características
 
-- **Responsive Design**: Works on desktop and mobile
-- **Form Validation**: Client-side validation with error messages
-- **Loading States**: Indicators during API calls
-- **Error Handling**: User-friendly error messages
-- **Real-time Updates**: State synchronized with backend
+- **Diseño Responsivo**: Funciona en escritorio y móvil
+- **Validación de Formularios**: Validación del lado del cliente con mensajes de error
+- **Estados de Carga**: Indicadores durante llamadas a la API
+- **Manejo de Errores**: Mensajes de error amigables para el usuario
+- **Actualizaciones en Tiempo Real**: Estado sincronizado con el backend
 
-## Technologies
+## Tecnologías
 
 - React 19
 - React Router DOM
-- Axios for API calls
-- Vite for build tooling
-- Vitest for testing
+- Axios para llamadas a la API
+- Vite para herramientas de construcción
+- Vitest para pruebas
 - Testing Library
-- CSS for styling
+- CSS para estilos
 
-## API Integration
+## Integración con API
 
-Communicates with backend API at http://localhost:3000
+Se comunica con la API del backend en http://localhost:3000
 
-All CRUD operations for chefs and tournaments are supported with proper error handling.
+Todas las operaciones CRUD para chefs y torneos están soportadas con manejo adecuado de errores.

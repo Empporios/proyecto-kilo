@@ -1,29 +1,29 @@
-# Backend API - Cooking Tournament Manager
+# API Backend - Administrador de Torneos de Cocina
 
-Node.js + Express REST API for managing cooking tournaments.
+API REST Node.js + Express para gestionar torneos de cocina.
 
-## Installation
+## Instalación
 
 ```bash
 npm install
 ```
 
-## Running
+## Ejecutando
 
 ```bash
 npm start
 ```
 
-Server runs on http://localhost:3000
+El servidor se ejecuta en http://localhost:3000
 
-## API Endpoints
+## Endpoints de la API
 
 ### Chefs
 
 #### POST /chefs
-Create a new chef.
+Crear un nuevo chef.
 
-**Request Body:**
+**Cuerpo de la Solicitud:**
 ```json
 {
   "name": "string",
@@ -32,19 +32,19 @@ Create a new chef.
 }
 ```
 
-**Response:** Chef object with generated ID
+**Respuesta:** Objeto chef con ID generado
 
 #### GET /chefs
-Get all chefs.
+Obtener todos los chefs.
 
-**Response:** Array of chef objects
+**Respuesta:** Array de objetos chef
 
-### Tournaments
+### Torneos
 
 #### POST /tournaments
-Create a new tournament.
+Crear un nuevo torneo.
 
-**Request Body:**
+**Cuerpo de la Solicitud:**
 ```json
 {
   "name": "string",
@@ -53,34 +53,34 @@ Create a new tournament.
 }
 ```
 
-**Response:** Tournament object with generated ID
+**Respuesta:** Objeto torneo con ID generado
 
 #### GET /tournaments
-Get all tournaments.
+Obtener todos los torneos.
 
-**Response:** Array of tournament objects
+**Respuesta:** Array de objetos torneo
 
 #### GET /tournaments/:id
-Get tournament details.
+Obtener detalles del torneo.
 
-**Response:** Tournament object with registered chefs and results
+**Respuesta:** Objeto torneo con chefs registrados y resultados
 
 #### POST /tournaments/:id/register
-Register a chef for a tournament.
+Registrar un chef para un torneo.
 
-**Request Body:**
+**Cuerpo de la Solicitud:**
 ```json
 {
   "chefId": "string"
 }
 ```
 
-**Response:** Success message
+**Respuesta:** Mensaje de éxito
 
 #### POST /tournaments/:id/submit
-Submit a score for a registered chef.
+Enviar una puntuación para un chef registrado.
 
-**Request Body:**
+**Cuerpo de la Solicitud:**
 ```json
 {
   "chefId": "string",
@@ -88,29 +88,29 @@ Submit a score for a registered chef.
 }
 ```
 
-**Response:** Success message
+**Respuesta:** Mensaje de éxito
 
 #### GET /tournaments/:id/ranking
-Get tournament ranking ordered by score.
+Obtener ranking del torneo ordenado por puntuación.
 
-**Response:** Array of ranking objects with chef details and scores
+**Respuesta:** Array de objetos ranking con detalles del chef y puntuaciones
 
-## Validation Rules
+## Reglas de Validación
 
-- Chef: name, specialty required; experienceYears >= 0
-- Tournament: name, location required; maxChefs > 0
-- Score: 0-100 range
-- Registration: Chef must exist, tournament not full, chef not already registered
-- Score submission: Chef must be registered for the tournament
+- Chef: nombre, especialidad requeridos; años de experiencia >= 0
+- Torneo: nombre, ubicación requeridos; maxChefs > 0
+- Puntuación: rango 0-100
+- Registro: El chef debe existir, el torneo no estar lleno, el chef no registrado previamente
+- Envío de puntuación: El chef debe estar registrado para el torneo
 
-## Error Responses
+## Respuestas de Error
 
-All errors return appropriate HTTP status codes with error messages:
+Todos los errores devuelven códigos de estado HTTP apropiados con mensajes de error:
 
-- 400: Bad Request (validation errors)
-- 404: Not Found
-- 500: Internal Server Error
+- 400: Solicitud Incorrecta (errores de validación)
+- 404: No Encontrado
+- 500: Error Interno del Servidor
 
-## Data Storage
+## Almacenamiento de Datos
 
-Currently uses in-memory storage. Data persists only during server runtime.
+Actualmente utiliza almacenamiento en memoria. Los datos persisten solo durante el tiempo de ejecución del servidor.
