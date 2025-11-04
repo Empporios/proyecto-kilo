@@ -1,16 +1,14 @@
-/* --- VARIABLES GLOBALES (PALETA DE COLORES Y ESTILOS) --- */
-/* :root define variables CSS (custom properties) que se pueden usar en todo el documento. */
-/* Es el lugar central para cambiar la paleta de colores del sitio. */
 :root {
-  --primary-color: #FF6B35;     /* Naranja cálido (color principal) */
-  --secondary-color: #F7931E;  /* Naranja amarillento (color secundario) */
-  --accent-color: #FFD23F;     /* Amarillo brillante (color de acento) */
-  --neutral-color: #8B4513;    /* Marrón (usado para texto) */
-  --background-color: #FFF8E1; /* Crema claro (fondo general de la página) */
-  --card-bg: #FFFFFF;          /* Blanco (fondo para tarjetas y contenido principal) */
-  --shadow: rgba(0,0,0,0.1);   /* Sombra suave reutilizable */
-}
+  --primary-color: #FF6B35;    /* Tu Naranja (¡Se mantiene!) */
+  --secondary-color: #F7931E;  /* Tu Naranja secundario (¡Se mantiene!) */
+  --accent-color: #FFD23F;    /* Tu Amarillo (¡Se mantiene!) */
 
+  /* --- CAMBIOS PRINCIPALES --- */
+  --neutral-color: #212529;    /* Un "Carbón" muy oscuro. Infinitamente más legible y profesional que el marrón para texto. */
+  --background-color: #F8F9FA;  /* Un gris ultra-claro. Más moderno y limpio que el crema, hace que los colores primarios resalten más. */
+  --card-bg: #FFFFFF;         /* Blanco puro (Se mantiene) */
+  --shadow: rgba(0,0,0,0.08);   /* Sombra un poco más sutil */
+}
 /* --- ESTILOS GENERALES DE LA APLICACIÓN --- */
 .App {
   font-family: 'Arial', sans-serif; /* Fuente principal para toda la app */
@@ -118,12 +116,6 @@ main {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Efecto "hover" para las tarjetas: se elevan y la sombra crece */
-.feature-card:hover {
-  transform: translateY(-5px); /* Mueve la tarjeta 5px hacia arriba */
-  box-shadow: 0 6px 16px var(--shadow); /* Sombra más grande */
-}
-
 .feature-card h3 {
   color: var(--primary-color);
   margin-bottom: 10px;
@@ -141,6 +133,7 @@ main {
   justify-content: center;
   gap: 20px;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .links a {

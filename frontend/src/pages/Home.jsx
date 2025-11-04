@@ -21,6 +21,14 @@ const Home = () => {
         </p>
       </div>
 
+      {/* Este 'div' es para los botones de navegación de abajo. */}
+      <div className="links">
+        {/* Este es el componente 'Link' que importamos.
+            Le decimos que cuando le hagan clic, nos lleve a la ruta "/tournaments". */}
+        <Link to="/tournaments" className="cta-button">Ver torneos</Link>
+        {/* Este 'Link' nos lleva a la ruta "/chefs". */}
+        <Link to="/chefs" className="cta-button">Gestionar chefs</Link>
+      </div>
       {/* Este 'div' va a contener las tres tarjetas con las "features" o características. */}
       <div className="features">
         {/* Primera tarjeta: Gestión de Chefs */}
@@ -38,15 +46,6 @@ const Home = () => {
           <h3>📊 Podio y resultados</h3>
           <p>Realizar un seguimiento de los resultados de las competiciones y manten actualizadas las clasificaciones de todos los torneos.</p>
         </div>
-      </div>
-
-      {/* Este 'div' es para los botones de navegación de abajo. */}
-      <div className="links">
-        {/* Este es el componente 'Link' que importamos.
-            Le decimos que cuando le hagan clic, nos lleve a la ruta "/tournaments". */}
-        <Link to="/tournaments" className="cta-button">Ver torneos</Link>
-        {/* Este 'Link' nos lleva a la ruta "/chefs". */}
-        <Link to="/chefs" className="cta-button">Gestionar chefs</Link>
       </div>
     </div>
   );
